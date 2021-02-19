@@ -103,7 +103,7 @@ const StyledHome = styled.div`
     border: 18px solid;
     border-image: ${(props) =>
       "linear-gradient(90deg, " +
-      props.theme.colors.main +
+      props.theme.colors.primary +
       " 0%, " +
       props.theme.colors.secondary +
       " 100%)"};

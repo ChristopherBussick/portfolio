@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     /* Adds a linear gradient to the text */
     background: ${(props) =>
       "linear-gradient(90deg, " +
-      props.theme.colors.main +
+      props.theme.colors.primary +
       " 0%, " +
       props.theme.colors.secondary +
       " 100%)"};
