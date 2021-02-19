@@ -2,20 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 interface ArticleProps {
-  className?: string;
   heading: string;
   subheading: string;
   text: string;
 }
 
 export const Article: React.FC<ArticleProps> = ({
-  className,
   heading,
   subheading,
   text,
 }) => {
   return (
-    <StyledArticle className={className}>
+    <StyledArticle>
       <h1>{heading}</h1>
       <h2>{subheading}</h2>
       <p>{text}</p>

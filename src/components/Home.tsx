@@ -47,7 +47,6 @@ const StyledHome = styled.div`
   padding: 125px 125px;
 
   .left-column {
-    /* width: 50%; */
     height: 100%;
     display: flex;
     flex-direction: column;
