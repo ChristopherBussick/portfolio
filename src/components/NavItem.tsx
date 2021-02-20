@@ -46,9 +46,6 @@ const StyledNavItemAnchor = styled.a<{ isActive: boolean }>`
   padding: 20px 30px;
   font-size: 1.2rem;
   font-weight: 400;
-  /* color: #a4a4a4; */
-
-  /* background-color: ${(props) => (props.isActive ? "red" : "black")}; */
   color: ${(props) =>
     props.isActive ? props.theme.colors.secondary : "#a4a4a4"};
 
