@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { getDefaultActiveSiteId } from "../navItems";
+import { getDefaultActiveSiteId } from "../../navItems";
 import { NavItem, NavItemProps } from "./NavItem";
 
 export interface NavProps {

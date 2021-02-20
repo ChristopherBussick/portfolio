@@ -1,4 +1,4 @@
-import { NavItemProps, NavItemType } from "./components/NavItem";
+import { NavItemProps, NavItemType } from "./components/navigation/NavItem";
 
 export const NavItems: Array<NavItemProps> = [
   { id: 0, itemType: NavItemType.Anchor, label: "Home", isActive: true },
