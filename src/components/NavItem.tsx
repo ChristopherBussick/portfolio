@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import styled from "styled-components";
 
 export enum NavItemType {
@@ -8,14 +8,33 @@ export enum NavItemType {
 }
 
 export interface NavItemProps {
+  id: number;
   itemType: NavItemType;
   label: string;
+  isActive: boolean;
+  setIsActive?: Dispatch<SetStateAction<number | undefined>>;
 }
 
-export const NavItem: React.FC<NavItemProps> = ({ itemType: type, label }) => {
+export const NavItem: React.FC<NavItemProps> = ({
+  id,
+  itemType: type,
+  label,
+  isActive,
+  setIsActive,
+}) => {
   switch (type) {
     case NavItemType.Anchor: {
-      return <StyledNavItemAnchor href="#">{label}</StyledNavItemAnchor>;
+      return (
+        <StyledNavItemAnchor
+          isActive={isActive}
+          href="#"
+          onClick={
+            setIsActive === undefined ? undefined : () => setIsActive(id)
+          }
+        >
+          {label}
+        </StyledNavItemAnchor>
+      );
     }
     default: {
       return <div>error, not done yet</div>;
@@ -23,14 +42,19 @@ export const NavItem: React.FC<NavItemProps> = ({ itemType: type, label }) => {
   }
 };
 
-const StyledNavItemAnchor = styled.a`
+const StyledNavItemAnchor = styled.a<{ isActive: boolean }>`
   padding: 20px 30px;
   font-size: 1.2rem;
   font-weight: 400;
-  color: #a4a4a4;
+  /* color: #a4a4a4; */
+
+  /* background-color: ${(props) => (props.isActive ? "red" : "black")}; */
+  color: ${(props) =>
+    props.isActive ? props.theme.colors.secondary : "#a4a4a4"};
 
   &:hover {
-    color: #2b2b2b;
+    color: ${(props) =>
+      props.isActive ? props.theme.colors.primary : "#2b2b2b"};
   }
 `;
 export default NavItem;

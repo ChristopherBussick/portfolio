@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { getDefaultActiveSiteId } from "../navItems";
 import { NavItem, NavItemProps } from "./NavItem";
 
 export interface NavProps {
@@ -7,19 +8,26 @@ export interface NavProps {
 }
 
 export const Nav: React.FC<NavProps> = ({ navItems }) => {
-  return (
-    <StyledNav>
-      {navItems.map((navItem, index) => {
-        return (
-          <NavItem
-            key={index}
-            itemType={navItem.itemType}
-            label={navItem.label}
-          />
-        );
-      })}
-    </StyledNav>
+  const [activeSite, setActiveSite] = useState<number | undefined>(
+    getDefaultActiveSiteId(navItems)
   );
+
+  function constructNavItems(navItems: Array<NavItemProps>) {
+    return navItems.map((navItem) => {
+      return (
+        <NavItem
+          key={navItem.id}
+          id={navItem.id}
+          itemType={navItem.itemType}
+          label={navItem.label}
+          isActive={navItem.id === activeSite}
+          setIsActive={setActiveSite}
+        />
+      );
+    });
+  }
+
+  return <StyledNav>{constructNavItems(navItems)}</StyledNav>;
 };
 
 const StyledNav = styled.div`
