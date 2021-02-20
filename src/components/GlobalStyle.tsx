@@ -44,6 +44,10 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     color: ${(props) => props.theme.colors.gray};
   }
+
+  img {
+    user-select: none;
+  }
 `;
 
 export default GlobalStyle;
