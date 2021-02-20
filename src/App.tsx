@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import GlobalStyle from "./components/GlobalStyle";
+import GlobalStyle from "./components/styles/GlobalStyle";
 import { defaultTheme } from "./styles/themes/defaultTheme";
 import Home from "./components/Home";
 import Nav from "./components/navigation/Nav";
