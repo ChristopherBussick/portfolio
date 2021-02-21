@@ -27,7 +27,6 @@ export const NavItem: React.FC<NavItemProps> = ({
       return (
         <StyledNavItemAnchor
           isActive={isActive}
-          href="#"
           onClick={
             setIsActive === undefined ? undefined : () => setIsActive(id)
           }

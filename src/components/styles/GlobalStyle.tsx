@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     transition: 0.2s;
+    cursor: pointer;
   }
 
   h1 {
