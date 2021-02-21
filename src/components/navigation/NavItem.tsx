@@ -47,6 +47,7 @@ const StyledNavItemAnchor = styled.a<{ isActive: boolean }>`
   font-weight: 400;
   color: ${(props) =>
     props.isActive ? props.theme.colors.secondary : "#a4a4a4"};
+  user-select: none;
 
   &:hover {
     color: ${(props) =>
