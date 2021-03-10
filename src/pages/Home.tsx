@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Article from "./Article";
+import Article from "../components/Article";
 import MeImg from "../res/me_5x7.png";
 import MonitorIcon from "../res/monitor.png";
 import CurlyBracketsIcon from "../res/curly_brackets.png";
@@ -12,7 +12,7 @@ export const Home: React.FC<HomeProps> = () => {
   return (
     <StyledHome>
       <div className="left-column">
-        <StyledArticleTest
+        <StyledArticle
           heading="Christopher Bussick"
           subheading="Full Stack Web, App and VR Development"
           text="This site is currently being reworked!"
@@ -38,7 +38,7 @@ export const Home: React.FC<HomeProps> = () => {
 
 // "Normal" react components need to be wrapped into a styled() factory to make it eligible for interpolation.
 // - See: https://styled-components.com/docs/advanced#referring-to-other-components
-const StyledArticleTest = styled(Article)``;
+const StyledArticle = styled(Article)``;
 
 const StyledHome = styled.div`
   flex: 1 1 auto;
@@ -93,7 +93,7 @@ const StyledHome = styled.div`
     }
   }
 
-  ${StyledArticleTest} {
+  ${StyledArticle} {
     margin-bottom: 35px;
   }
 
@@ -113,4 +113,3 @@ const StyledHome = styled.div`
     max-height: 464px;
   }
 `;
-export default Home;

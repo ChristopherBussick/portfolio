@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export enum NavItemType {
@@ -13,6 +14,7 @@ export interface NavItemProps {
   label: string;
   isActive: boolean;
   setIsActive?: Dispatch<SetStateAction<number | undefined>>;
+  linkTo: string;
 }
 
 export const NavItem: React.FC<NavItemProps> = ({
@@ -21,6 +23,7 @@ export const NavItem: React.FC<NavItemProps> = ({
   label,
   isActive,
   setIsActive,
+  linkTo,
 }) => {
   switch (type) {
     case NavItemType.Anchor: {
@@ -30,6 +33,7 @@ export const NavItem: React.FC<NavItemProps> = ({
           onClick={
             setIsActive === undefined ? undefined : () => setIsActive(id)
           }
+          to={linkTo}
         >
           {label}
         </StyledNavItemAnchor>
@@ -41,7 +45,7 @@ export const NavItem: React.FC<NavItemProps> = ({
   }
 };
 
-const StyledNavItemAnchor = styled.a<{ isActive: boolean }>`
+const StyledNavItemAnchor = styled(Link)<{ isActive: boolean }>`
   padding: 20px 30px;
   font-size: 1.2rem;
   font-weight: 400;
@@ -50,6 +54,7 @@ const StyledNavItemAnchor = styled.a<{ isActive: boolean }>`
   user-select: none;
 
   &:hover {
+    background: none;
     color: ${(props) =>
       props.isActive ? props.theme.colors.primary : "#2b2b2b"};
   }

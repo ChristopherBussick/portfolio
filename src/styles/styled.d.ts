@@ -11,6 +11,7 @@ declare module "styled-components" {
     colors: {
       primary: string;
       secondary: string;
+      complimentary: string;
       gray: string;
     };
   }

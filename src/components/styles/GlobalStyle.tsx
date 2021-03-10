@@ -16,6 +16,12 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     transition: 0.2s;
     cursor: pointer;
+    color: ${(props) => props.theme.colors.gray};
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: ${(props) => props.theme.colors.secondary};
+    }
   }
 
   h1 {
@@ -38,6 +44,22 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2.25rem;
     font-weight: 400;
     color: ${(props) => props.theme.colors.gray};
+  }
+
+  h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    /* Adds a linear gradient to the text */
+    background: ${(props) =>
+      "linear-gradient(90deg, " +
+      props.theme.colors.primary +
+      " 0%, " +
+      props.theme.colors.secondary +
+      " 100%)"};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   p {
