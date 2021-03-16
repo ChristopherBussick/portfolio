@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.78ce4778.chunk.js",
-    "main.js.map": "/static/js/main.78ce4778.chunk.js.map",
+    "main.js": "/static/js/main.56f2ba76.chunk.js",
+    "main.js.map": "/static/js/main.56f2ba76.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
     "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
     "static/js/2.23e51dfe.chunk.js": "/static/js/2.23e51dfe.chunk.js",
@@ -10,11 +10,12 @@
     "static/js/2.23e51dfe.chunk.js.LICENSE.txt": "/static/js/2.23e51dfe.chunk.js.LICENSE.txt",
     "static/media/bpm_tapper_thumbnail.02350ab3.png": "/static/media/bpm_tapper_thumbnail.02350ab3.png",
     "static/media/me_5x7.e4f60355.png": "/static/media/me_5x7.e4f60355.png",
-    "static/media/portfolio_website_thumbnail.1e0258b4.png": "/static/media/portfolio_website_thumbnail.1e0258b4.png"
+    "static/media/portfolio_website_thumbnail.1e0258b4.png": "/static/media/portfolio_website_thumbnail.1e0258b4.png",
+    "static/media/virtual_boxing_simulator_thumbnail.7b4ae38b.jpg": "/static/media/virtual_boxing_simulator_thumbnail.7b4ae38b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2fd7dc15.js",
     "static/js/2.23e51dfe.chunk.js",
-    "static/js/main.78ce4778.chunk.js"
+    "static/js/main.56f2ba76.chunk.js"
   ]
 }
