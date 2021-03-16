@@ -17,7 +17,7 @@ export const ProjectsList: Project[] = [
     name: "Virtual Boxing Simulator",
     thumbnail: VirtualBoxingSimulatorThumbnail,
     url: "https://www.youtube.com/watch?v=3zIW1LwYYDQ",
-    description: `A game simulating the sport of boxing in virtual reality. This project was made by a group of 6 students from the WHS as part of their respective curricula.
+    description: `A game simulating the sport of boxing in virtual reality. This project was made by our group of 6 students from the WHS as part of our respective curricula.
     It features a rhythm-based game mode with multiple difficulties, progress recording and character customization.`,
   },
   {
