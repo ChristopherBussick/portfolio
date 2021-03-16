@@ -31,7 +31,7 @@ export const Nav: React.FC<NavProps> = ({ navItems }) => {
   return <StyledNav>{constructNavItems(navItems)}</StyledNav>;
 };
 
-const StyledNav = styled.div`
+const StyledNav = styled.nav`
   display: flex;
 `;
 
