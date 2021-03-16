@@ -12,8 +12,6 @@ export const Nav: React.FC<NavProps> = ({ navItems }) => {
     getDefaultActiveSiteId(navItems)
   );
 
-  console.log(window.location.pathname);
-
   function constructNavItems(navItems: Array<NavItemProps>) {
     return navItems.map((navItem) => {
       return (

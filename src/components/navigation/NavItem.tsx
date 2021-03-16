@@ -29,7 +29,7 @@ export const NavItem: React.FC<NavItemProps> = ({
     case NavItemType.Anchor: {
       return (
         <StyledNavItemAnchor
-          isActive={isActive}
+          $isActive={isActive}
           onClick={
             setIsActive === undefined ? undefined : () => setIsActive(id)
           }
@@ -45,18 +45,21 @@ export const NavItem: React.FC<NavItemProps> = ({
   }
 };
 
-const StyledNavItemAnchor = styled(Link)<{ isActive: boolean }>`
+// "isActive" is prefixed with a "$" in order to make it a transient prop in order to prevent it from being rendered to the DOM element.
+// It would be rendered to the DOM element because the React Router Link component passes all unknown properties to it.
+// - See: https://styled-components.com/docs/api#transient-props
+const StyledNavItemAnchor = styled(Link)<{ $isActive: boolean }>`
   padding: 20px 30px;
   font-size: 1.2rem;
   font-weight: 400;
   color: ${(props) =>
-    props.isActive ? props.theme.colors.secondary : "#a4a4a4"};
+    props.$isActive ? props.theme.colors.secondary : "#a4a4a4"};
   user-select: none;
 
   &:hover {
     background: none;
     color: ${(props) =>
-      props.isActive ? props.theme.colors.primary : "#2b2b2b"};
+      props.$isActive ? props.theme.colors.primary : "#2b2b2b"};
   }
 `;
 export default NavItem;

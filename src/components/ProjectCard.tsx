@@ -17,7 +17,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         />
       ) : null}
       {project.url ? (
-        <a className="url" href={project.url}>
+        <a className="url" href={project.url} target="_blank" rel="noreferrer">
           Take me to the project!
         </a>
       ) : null}
@@ -32,8 +32,9 @@ const StyledProjectCard = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 100%;
+  flex: 1 0 31.333333%;
+  max-width: 500px;
+  height: 700px;
 
   .url {
     margin: 10px 0 10px 0;
@@ -41,7 +42,7 @@ const StyledProjectCard = styled.div`
   }
 
   .thumbnail {
-    height: 250px;
+    height: 225px;
     align-self: center;
   }
 

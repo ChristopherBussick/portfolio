@@ -11,7 +11,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <StyledProjects>
       {projects.map((project) => {
-        return <ProjectCard project={project} />;
+        return <ProjectCard project={project} key={project.id} />;
       })}
     </StyledProjects>
   );
@@ -20,9 +20,13 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 const StyledProjects = styled.div`
   flex: 1 1 auto;
   display: flex;
-  padding: 125px 125px;
+  padding: 25px 25px;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
 
-  .project-card:not(:last-child) {
-    margin-right: 35px;
-  }
+  /* .project-card:not(:last-child) {
+    margin: 0 35px 0px 0;
+  } */
 `;
